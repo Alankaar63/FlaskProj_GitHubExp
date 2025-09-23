@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>🏆 Famous Football Teams</h2>
+  <ul class="list-group text-dark mt-3">
+    {% for team in teams %}
+      <li class="list-group-item">
+        <strong>{{ team.name }}</strong> ({{ team.country }}) - Champions League Titles: {{ team.titles }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

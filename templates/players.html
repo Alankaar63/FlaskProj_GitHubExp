@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>🌟 Famous Players</h2>
+  <ul class="list-group text-dark mt-3">
+    {% for player in players %}
+      <li class="list-group-item">
+        {{ player.name }} - Club: {{ player.club }} ({{ player.country }})
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

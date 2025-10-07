@@ -1,6 +1,14 @@
+import os
 from flask import Flask, render_template
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
 
 app = Flask(__name__)
+
+# Use environment variable for secret key
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'defaultsecret')
 
 # Sample Data
 players = [
@@ -30,4 +38,5 @@ def show_teams():
     return render_template("teams.html", teams=teams)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug_mode = os.getenv('DEBUG', 'False') == 'True'
+    app.run(debug=debug_mode)

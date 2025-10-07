@@ -1,5 +1,10 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 {% block content %}
-  <h1>Welcome to Football Hub ⚽</h1>
-  <p class="lead">Explore famous football teams and players!</p>
+  <h1 class="display-4 fw-bold mb-4">Welcome to the Football Knowledge Hub ⚽</h1>
+  <p class="lead mb-5">Explore your favorite football players and teams from around the world!</p>
+
+  <div class="d-flex justify-content-center gap-4">
+    <a href="/players" class="btn btn-outline-light btn-lg px-4 py-3">Know About Players 🌟</a>
+    <a href="/teams" class="btn btn-outline-light btn-lg px-4 py-3">Know About Teams 🏆</a>
+  </div>
 {% endblock %}

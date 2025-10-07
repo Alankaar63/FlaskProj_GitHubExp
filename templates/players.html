@@ -1,11 +1,17 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 {% block content %}
-  <h2>🌟 Famous Players</h2>
-  <ul class="list-group text-dark mt-3">
+  <h2 class="fw-bold mb-4">🌟 Top Football Players</h2>
+  <div class="row justify-content-center">
     {% for player in players %}
-      <li class="list-group-item">
-        {{ player.name }} - Club: {{ player.club }} ({{ player.country }})
-      </li>
+      <div class="col-md-4 mb-4">
+        <div class="card text-dark">
+          <div class="card-body">
+            <h5 class="card-title">{{ player.name }}</h5>
+            <p class="card-text">Club: {{ player.club }}</p>
+            <p class="card-text">Country: {{ player.country }}</p>
+          </div>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 {% endblock %}

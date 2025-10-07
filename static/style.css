@@ -1,0 +1,132 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL LAYOUT */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: #fff;
+  background: url('/static/images/football-bg.jpg') center center/cover no-repeat;
+  overflow-x: hidden;
+}
+
+/* Dark overlay for text visibility */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+/* STADIUM SPOTLIGHT GLOW (subtle gradient overlay) */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: radial-gradient(circle at top, rgba(0, 255, 255, 0.15), transparent 70%);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 15px 40px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00bfff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bfff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+/* MAIN CONTAINER */
+.container {
+  text-align: center;
+  margin-top: 10vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00bfff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 25px rgba(0, 191, 255, 0.9);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 40px;
+}
+
+/* BUTTONS */
+.btn {
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  border: none;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.9);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid rgba(0, 191, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+footer p {
+  margin: 0;
+}
